@@ -9,7 +9,7 @@ const Home = () => {
         Fernandhito Pratama
       </h2>
       <p className="text-3xl text-gray-300 mx-auto">
-        Pray your works, do your best, and trust in God.
+        Do your best, let God do the rest.
       </p>
       <button className="mt-6 px-6 py-3 mr-2 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-500 transition duration-300 cursor-pointer">
         Contact Me <i class="fa-solid fa-paper-plane"></i>

@@ -6,9 +6,13 @@ const About = () => {
       className="about mt-10 py-20 text-justify items-center px-4"
       id="about"
     >
+      <h5 className="font-medium mb-2">001</h5>
       <h2 className="text-4xl font-bold mb-4">Fernandhito Dian Pratama</h2>
       <span className="text-md font-medium text-black bg-yellow-400 p-2 rounded-lg">
         Front-end
+      </span>
+      <span className="text-md font-medium text-black bg-yellow-400 p-2 rounded-lg ml-2">
+        UI/UX
       </span>
       <p className="mt-15 text-xl text-gray-300">
         I am an Informatics Engineering student at the Electronic Engineering

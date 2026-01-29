@@ -35,7 +35,7 @@ const About = () => {
         aligned with current front-end development standards.
       </p>
       <button className="mt-10 px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-500 hover:scale-105 transition-all duration-300">
-        See My CV <i className="fa-solid fa-file-arrow-down ml-2"></i>
+        See My CV <i className="fa-solid fa-file-arrow-down ml-1"></i>
       </button>
     </div>
   );

@@ -34,7 +34,13 @@ const About = () => {
         practices. I continue to learn new tools and best practices to stay
         aligned with current front-end development standards.
       </p>
-      <button className="mt-10 px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-500 hover:scale-105 transition-all duration-300">
+      <button className="mt-10 px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-500 hover:scale-105 transition-all duration-300 cursor-pointer"
+        onClick={() =>
+          window.open(
+            "https://drive.google.com/file/d/1gSHerUPi-DwhO8ZTjcRMIlkkAcHevn2q/view?usp=drive_link",
+          )
+        }
+      >
         See My CV <i className="fa-solid fa-file-arrow-down ml-1"></i>
       </button>
     </div>

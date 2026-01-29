@@ -147,7 +147,15 @@ const Project = () => {
           </p>
         </div>
       </div>
-      <button className="mt-6 px-6 py-3 item-center bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-500 transition duration-300 cursor-pointer">
+      <button
+        className="mt-6 px-6 py-3 item-center bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-500 transition duration-300 cursor-pointer"
+        onClick={() =>
+          window.open(
+            "https://github.com/nandhitooo?tab=repositories",
+            "_blank"
+          )
+        }
+      >
         View More Projects <i class="fa-solid fa-arrow-right ml-2"></i>
       </button>
     </div>

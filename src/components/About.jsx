@@ -8,13 +8,13 @@ const About = () => {
     >
       <h5 className="font-medium mb-2">001</h5>
       <h2 className="text-4xl font-bold mb-4">Fernandhito Dian Pratama</h2>
-      <span className="text-md font-medium text-black bg-yellow-400 p-2 rounded-lg">
+      <span className="text-md font-medium text-black bg-yellow-400 p-2 rounded-lg hover:scale-105 transition-all duration-300">
         Front-end
       </span>
-      <span className="text-md font-medium text-black bg-yellow-400 p-2 rounded-lg ml-2">
+      <span className="text-md font-medium text-black bg-yellow-400 p-2 rounded-lg ml-2 hover:scale-105 transition-all duration-300">
         UI/UX
       </span>
-      <span className="text-md font-medium text-black bg-yellow-400 p-2 rounded-lg ml-2">
+      <span className="text-md font-medium text-black bg-yellow-400 p-2 rounded-lg ml-2 hover:scale-105 transition-all duration-300">
         Multimedia
       </span>
       <p className="mt-15 text-xl text-gray-300">

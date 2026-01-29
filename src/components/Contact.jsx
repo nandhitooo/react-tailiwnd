@@ -166,6 +166,64 @@ const Contact = () => {
             )}
           </button>
         </form>
+        <div className="social-links mb-10 items-center justify-center text-center mt-6">
+          <a
+            href="https://github.com/nandhitooo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mr-4 text-gray-300 hover:text-yellow-400 transition duration-300"
+          >
+            <i className="fab fa-github text-2xl"></i>
+          </a>
+          <a
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mr-4 text-gray-300 hover:text-yellow-400 transition duration-300"
+          >
+            <i className="fab fa-linkedin text-2xl"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/nandh1tooo_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-yellow-400 transition duration-300"
+          >
+            <i className="fab fa-instagram text-2xl"></i>
+          </a>
+          <a
+            href="https://x.com/Fernandhito8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 text-gray-300 hover:text-yellow-400 transition duration-300"
+          >
+            <i className="fab fa-x-twitter text-2xl"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/Nandhitooo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 text-gray-300 hover:text-yellow-400 transition duration-300"
+          >
+            <i className="fab fa-facebook text-2xl"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/@nandhitooo_"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 text-gray-300 hover:text-yellow-400 transition duration-300"
+          >
+            <i className="fab fa-tiktok text-2xl"></i>
+          </a>
+          <a
+            href="https://wa.me/6285812222628"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 text-gray-300 hover:text-yellow-400 transition duration-300"
+          >
+            <i className="fab fa-whatsapp text-2xl"></i>
+          </a>
+        </div>
       </div>
     </>
   );

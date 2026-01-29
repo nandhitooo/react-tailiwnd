@@ -25,8 +25,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar fixed top-0 left-50 right-50 z-50 flex items-center justify-between py-4 text-white bg-zinc-900 hidden">
-      <h1 className="title text-2xl font-bold text-white">Fernandhito</h1>
+    <div className="navbar fixed top-0 lg:left-50 lg:right-50 z-50 flex items-center justify-between py-4 text-white bg-zinc-900 sm:hidden md:flex md:px-10 md:py-6 md:left-0 md:right-0">
+      <h1 className="title text-2xl font-bold text-white ">Fernandhito</h1>
       <ul
         className={`menu flex space-x-4 gap-10 md:static fixed left-1/2 -translate-x-1/2 md:-translate-x-0 md:opacity-100 ${
           isMenuOpen ? "top-0 opacity-100" : "-top-10 opacity-0"

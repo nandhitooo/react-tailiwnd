@@ -39,6 +39,9 @@ const Navbar = () => {
           <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection("about"); }}>About</a>
         </li>
         <li className="hover:text-yellow-400 font-medium">
+          <a href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection("skills"); }}>Skills</a>
+        </li>
+        <li className="hover:text-yellow-400 font-medium">
           <a href="#journey" onClick={(e) => { e.preventDefault(); scrollToSection("journey"); }}>Journey</a>
         </li>
         <li className="hover:text-yellow-400 font-medium">

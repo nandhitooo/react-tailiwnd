@@ -7,7 +7,7 @@ const Project = () => {
       className="project mt-10 py-20 text-justify items-center px-4"
       id="projects"
     >
-      <h5 className="font-medium mb-2">003</h5>
+      <h5 className="font-medium mb-2">004</h5>
       <h2 className="text-4xl font-bold mb-4">Projects</h2>
       <p className="mt-6 text-xl text-gray-300">
         Here are some of my projects that showcase my skills in front-end

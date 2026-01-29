@@ -4,8 +4,8 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 const Home = () => {
   const text = "Welcome...!!";
   const typingText = () => {
-    const[displayText, setDisplayText] = React.useState("");
-    const[index, setIndex] = React.useState(0);
+    const [displayText, setDisplayText] = React.useState("");
+    const [index, setIndex] = React.useState(0);
     React.useEffect(() => {
       const speed = 80;
       const delayBeforeStart = 5000;
@@ -13,8 +13,8 @@ const Home = () => {
       let timeout;
       if (index < text.length) {
         timeout = setTimeout(() => {
-          setDisplayText(prev => prev + text[index]);
-          setIndex(prev => prev + 1);
+          setDisplayText((prev) => prev + text[index]);
+          setIndex((prev) => prev + 1);
         }, speed);
       } else {
         timeout = setTimeout(() => {
@@ -33,18 +33,21 @@ const Home = () => {
       className="home items-center justify-center text-center mt-10 px-4 py-20"
       id="home"
     >
-      <h3
-        className="text-2xl text-gray-400 font-bold mb-4" 
-      >
-        {typingText()}
-      </h3>
+      <h3 className="text-2xl text-gray-400 font-bold mb-4">{typingText()}</h3>
       <h2 className="text-6xl text-yellow-400 font-bold mb-4">
         Fernandhito Pratama
       </h2>
       <p className="text-3xl text-gray-300 mx-auto">
         Do your best, let God do the rest.
       </p>
-      <button className="mt-6 px-6 py-3 mr-2 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-500 transition duration-300 cursor-pointer">
+      <button
+        className="mt-6 px-6 py-3 mr-2 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-500 transition duration-300 cursor-pointer"
+        onClick={() =>
+          document
+            .getElementById("contact")
+            .scrollIntoView({ behavior: "smooth" })
+        }
+      >
         Contact Me <i class="fa-solid fa-paper-plane"></i>
       </button>
       <a

@@ -8,6 +8,8 @@ import About from "./components/About.jsx";
 import Journey from "./components/journey.jsx";
 import Project from "./components/Project.jsx";
 import Skills from "./components/Skills.jsx";
+import Contact from "./components/Contact.jsx";
+import Bottom from "./components/Bottom.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -18,6 +20,8 @@ createRoot(document.getElementById("root")).render(
       <Journey />
       <Skills />
       <Project />
+      <Contact />
+      <Bottom />
     </div>
   </StrictMode>
 );

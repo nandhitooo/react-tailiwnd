@@ -25,7 +25,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar fixed top-0 left-50 right-50 z-50 flex items-center justify-between py-4 text-white bg-zinc-900">
+    <div className="navbar fixed top-0 left-50 right-50 z-50 flex items-center justify-between py-4 text-white bg-zinc-900 hidden">
       <h1 className="title text-2xl font-bold text-white">Fernandhito</h1>
       <ul
         className={`menu flex space-x-4 gap-10 md:static fixed left-1/2 -translate-x-1/2 md:-translate-x-0 md:opacity-100 ${
@@ -39,10 +39,10 @@ const Navbar = () => {
           <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection("about"); }}>About</a>
         </li>
         <li className="hover:text-yellow-400 font-medium">
-          <a href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection("skills"); }}>Skills</a>
+          <a href="#journey" onClick={(e) => { e.preventDefault(); scrollToSection("journey"); }}>Journey</a>
         </li>
         <li className="hover:text-yellow-400 font-medium">
-          <a href="#journey" onClick={(e) => { e.preventDefault(); scrollToSection("journey"); }}>Journey</a>
+          <a href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection("skills"); }}>Skills</a>
         </li>
         <li className="hover:text-yellow-400 font-medium">
           <a href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection("projects"); }}>Projects</a>

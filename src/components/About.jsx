@@ -14,6 +14,9 @@ const About = () => {
       <span className="text-md font-medium text-black bg-yellow-400 p-2 rounded-lg ml-2">
         UI/UX
       </span>
+      <span className="text-md font-medium text-black bg-yellow-400 p-2 rounded-lg ml-2">
+        Multimedia
+      </span>
       <p className="mt-15 text-xl text-gray-300">
         I am an Informatics Engineering student at the Electronic Engineering
         Polytechnic Institute of Surabaya (EEPIS) with a strong focus on
@@ -31,6 +34,9 @@ const About = () => {
         practices. I continue to learn new tools and best practices to stay
         aligned with current front-end development standards.
       </p>
+      <button className="mt-10 px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-500 hover:scale-105 transition-all duration-300">
+        See My CV <i className="fa-solid fa-file-arrow-down ml-2"></i>
+      </button>
     </div>
   );
 };

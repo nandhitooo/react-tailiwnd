@@ -34,10 +34,10 @@ const Home = () => {
       id="home"
     >
       <h3 className="text-2xl text-gray-400 font-bold mb-4">{typingText()}</h3>
-      <h2 className="text-6xl text-yellow-400 font-bold mb-4">
+      <h2 className="lg:text-6xl text-yellow-400 font-bold mb-4 md:text-4xl text-4xl">
         Fernandhito Pratama
       </h2>
-      <p className="text-3xl text-gray-300 mx-auto">
+      <p className="text-3xl text-gray-300 mx-auto mb-4 md:text-2xl sm:text-xl">
         Do your best, let God do the rest.
       </p>
       <button

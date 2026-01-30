@@ -216,12 +216,12 @@ const Contact = () => {
             <i className="fab fa-tiktok text-2xl"></i>
           </a>
           <a
-            href="https://wa.me/6285812222628"
+            href="https://discord.gg/hnrPCyt5n2"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-4 text-gray-300 hover:text-yellow-400 transition duration-300"
           >
-            <i className="fab fa-whatsapp text-2xl"></i>
+            <i className="fab fa-discord text-2xl"></i>
           </a>
         </div>
       </div>

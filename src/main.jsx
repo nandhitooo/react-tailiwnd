@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import Navbar from "./components/navbar.jsx";
 import Home from "./components/Home.jsx";
 import About from "./components/About.jsx";
-import Journey from "./components/journey.jsx";
+import Journey from "./components/Journey.jsx";
 import Project from "./components/Project.jsx";
 import Skills from "./components/Skills.jsx";
 import Contact from "./components/Contact.jsx";
@@ -17,8 +17,8 @@ createRoot(document.getElementById("root")).render(
       <Navbar />
       <Home />
       <About />
-      <Journey />
       <Skills />
+      <Journey />
       <Project />
       <Contact />
       <Bottom />

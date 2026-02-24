@@ -88,7 +88,7 @@ const Contact = () => {
         </p>
       </div>
 
-      <div className="grid gap-10 w-1/2 mt-12">
+      <div className="grid gap-10 w-full max-w-md sm:max-w-2xl mt-12">
         <form
           onSubmit={handleSubmit}
           className="bg-gray-800 p-8 rounded-xl shadow-lg"

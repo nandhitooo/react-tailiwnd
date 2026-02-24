@@ -19,42 +19,42 @@ const Skills = () => {
         </p>
         <div className="skills_list mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {" "}
-          <div className="bg-gray-800 py-3 px-4 rounded-md flex items-center gap-3 border-l-4 border-yellow-400 hover:scale-105 hover:text-orange-500 transition duration-300 cursor-pointer">
+          <div className="bg-gray-800 py-3 px-4 rounded-md flex items-center gap-3 border-l-4 border-white-500 hover:scale-105 hover:text-orange-500 transition duration-300 cursor-pointer">
             {" "}
             <i className="fa-brands fa-html5 text-lg"></i>{" "}
             <span className="text-sm font-medium">HTML</span>{" "}
           </div>{" "}
-          <div className="bg-gray-800 py-3 px-4 rounded-md flex items-center gap-3 border-l-4 border-yellow-400 hover:scale-105 hover:text-blue-500 transition duration-300 cursor-pointer">
+          <div className="bg-gray-800 py-3 px-4 rounded-md flex items-center gap-3 border-l-4 border-white-500 hover:scale-105 hover:text-blue-500 transition duration-300 cursor-pointer">
             {" "}
             <i className="fa-brands fa-css3-alt text-lg"></i>{" "}
             <span className="text-sm font-medium">CSS</span>{" "}
           </div>{" "}
-          <div className="bg-gray-800 py-3 px-4 rounded-md flex items-center gap-3 border-l-4 border-yellow-400 hover:scale-105 hover:text-yellow-500 transition duration-300 cursor-pointer">
+          <div className="bg-gray-800 py-3 px-4 rounded-md flex items-center gap-3 border-l-4 border-white-500 hover:scale-105 hover:text-yellow-500 transition duration-300 cursor-pointer">
             {" "}
             <i className="fa-brands fa-js text-lg"></i>{" "}
             <span className="text-sm font-medium">JavaScript</span>{" "}
           </div>{" "}
-          <div className="bg-gray-800 py-3 px-4 rounded-md flex items-center gap-3 border-l-4 border-yellow-400 hover:scale-105 hover:text-blue-400 transition duration-300 cursor-pointer">
+          <div className="bg-gray-800 py-3 px-4 rounded-md flex items-center gap-3 border-l-4 border-white-500 hover:scale-105 hover:text-blue-400 transition duration-300 cursor-pointer">
             {" "}
             <i className="fa-brands fa-react text-lg"></i>{" "}
             <span className="text-sm font-medium">React</span>{" "}
           </div>{" "}
-          <div className="bg-gray-800 py-3 px-4 rounded-md flex items-center gap-3 border-l-4 border-yellow-400 hover:scale-105 hover:text-green-500 transition duration-300 cursor-pointer">
+          <div className="bg-gray-800 py-3 px-4 rounded-md flex items-center gap-3 border-l-4 border-white-500 hover:scale-105 hover:text-green-500 transition duration-300 cursor-pointer">
             {" "}
             <i className="fa-brands fa-node-js text-lg"></i>{" "}
             <span className="text-sm font-medium">Node</span>{" "}
           </div>{" "}
-          <div className="bg-gray-800 py-3 px-4 rounded-md flex items-center gap-3 border-l-4 border-yellow-400 hover:scale-105 hover:text-red-500 transition duration-300 cursor-pointer">
+          <div className="bg-gray-800 py-3 px-4 rounded-md flex items-center gap-3 border-l-4 border-white-500 hover:scale-105 hover:text-red-500 transition duration-300 cursor-pointer">
             {" "}
             <i className="fa-brands fa-java text-lg"></i>{" "}
             <span className="text-sm font-medium">Java</span>{" "}
           </div>{" "}
-          <div className="bg-gray-800 py-3 px-4 rounded-md flex items-center gap-3 border-l-4 border-yellow-400 hover:scale-105 hover:text-purple-500 transition duration-300 cursor-pointer">
+          <div className="bg-gray-800 py-3 px-4 rounded-md flex items-center gap-3 border-l-4 border-white-500 hover:scale-105 hover:text-purple-500 transition duration-300 cursor-pointer">
             {" "}
             <i className="fa-solid fa-images text-lg"></i>{" "}
             <span className="text-sm font-medium">Design</span>{" "}
           </div>{" "}
-          <div className="bg-gray-800 py-3 px-4 rounded-md flex items-center gap-3 border-l-4 border-yellow-400 hover:scale-105 hover:text-pink-500 transition duration-300 cursor-pointer">
+          <div className="bg-gray-800 py-3 px-4 rounded-md flex items-center gap-3 border-l-4 border-white-500 hover:scale-105 hover:text-pink-500 transition duration-300 cursor-pointer">
             {" "}
             <i className="fa-solid fa-video text-lg"></i>{" "}
             <span className="text-sm font-medium">Editing</span>{" "}

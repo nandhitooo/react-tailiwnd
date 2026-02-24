@@ -1,231 +1,136 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState("");
 
-  emailjs.init("ZvEiQIJFkiCVwhE0j");
+  useEffect(() => {
+    emailjs.init("ZvEiQIJFkiCVwhE0j");
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setError(null);
+    setError("");
     setSuccess(false);
 
-    const form = e.target;
-
-    // Data dari form
-    const formData = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
-    };
+    const { name, email, message } = e.target;
 
     try {
-      await emailjs.send(
-        "service_65bxvuz",
-        "template_21xq82v",
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-          to_name: "Fernandhito",
-          reply_to: formData.email,
-        },
-      );
+      await emailjs.send("service_65bxvuz", "template_21xq82v", {
+        from_name: name.value,
+        from_email: email.value,
+        message: message.value,
+        to_name: "Fernandhito",
+        reply_to: email.value,
+      });
 
-      form.reset();
+      e.target.reset();
       setSuccess(true);
-
-      setTimeout(() => {
-        setSuccess(false);
-      }, 5000);
+      setTimeout(() => setSuccess(false), 5000);
     } catch (err) {
-      console.error("Email sending failed:", err);
-      setError("Failed to send message. Please try again later.");
+      setError("Failed to send message. Please try again.");
     } finally {
       setLoading(false);
     }
   };
 
+  const Input = ({ label, name, type, placeholder }) => (
+    <div className="mb-4">
+      <label className="block mb-2 text-gray-300">{label}</label>
+      <input
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        required
+        className="w-full px-4 py-2 bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+      />
+    </div>
+  );
+
+  const Textarea = ({ label, name, placeholder }) => (
+    <div className="mb-6">
+      <label className="block mb-2 text-gray-300">{label}</label>
+      <textarea
+        name={name}
+        placeholder={placeholder}
+        rows="5"
+        required
+        className="w-full px-4 py-2 bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+      ></textarea>
+    </div>
+  );
+
+  const socialLinks = [
+    { icon: "fab fa-github", link: "https://github.com/nandhitooo" },
+    { icon: "fab fa-linkedin", link: "#" },
+    {
+      icon: "fab fa-instagram",
+      link: "https://www.instagram.com/nandh1tooo_/",
+    },
+    { icon: "fab fa-x-twitter", link: "https://x.com/Fernandhito8" },
+    { icon: "fab fa-facebook", link: "https://www.facebook.com/Nandhitooo" },
+    { icon: "fab fa-tiktok", link: "https://www.tiktok.com/@nandhitooo_" },
+    { icon: "fab fa-discord", link: "https://discord.gg/hnrPCyt5n2" },
+  ];
+
   return (
-    <>
-      <div
-        className="contact items-center justify-center text-center mt-10 px-4 pt-20"
-        id="contact"
-      >
+    <section
+      id="contact"
+      className="min-h-screen bg-zinc-900 text-white flex flex-col items-center px-4"
+    >
+      <div className="text-center mt-20 max-w-2xl">
         <h2 className="text-4xl font-bold mb-4">Contact Me</h2>
-        <p className="mt-6 text-xl text-gray-300">
-          I'm always open to discussing new projects, creative ideas, or
-          opportunities to be part of your visions. Feel free to reach out to me
-          through the contact form below or via my social media channels.
+        <p className="text-gray-300">
+          Feel free to reach out for projects, collaborations, or opportunities.
         </p>
       </div>
-      <div className="mt-4 mb-10 px-4">
+
+      <div className="grid gap-10 w-1/2 mt-12">
         <form
           onSubmit={handleSubmit}
-          className="max-w-lg mx-auto bg-gray-800 p-8 rounded-lg shadow-lg"
+          className="bg-gray-800 p-8 rounded-xl shadow-lg"
         >
-          <div className="mb-4">
-            <label
-              className="block text-gray-300 font-medium mb-2"
-              htmlFor="name"
-            >
-              Name
-            </label>
-            <input
-              className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your Name"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              className="block text-gray-300 font-medium mb-2"
-              htmlFor="email"
-            >
-              Email
-            </label>
-            <input
-              className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-          </div>
-          <div className="mb-6">
-            <label
-              className="block text-gray-300 font-medium mb-2"
-              htmlFor="message"
-            >
-              Message
-            </label>
-            <textarea
-              className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-              id="message"
-              name="message"
-              rows="5"
-              placeholder="Your Message"
-              required
-            ></textarea>
-          </div>
+          <Input label="Name" name="name" placeholder="Your Name" type="text" />
+          <Input label="Email" name="email" placeholder="Your Email" type="email" />
+          <Textarea label="Message" placeholder="Write Your Message" name="message" />
 
-          {/* Status Messages */}
           {success && (
-            <div className="mb-4 p-3 bg-green-500 text-white rounded-lg">
-              Message sent successfully! I'll get back to you soon.
+            <div className="mb-4 p-3 bg-green-500 rounded">
+              Message sent successfully.
             </div>
           )}
 
-          {error && (
-            <div className="mb-4 p-3 bg-red-500 text-white rounded-lg">
-              {error}
-            </div>
-          )}
+          {error && <div className="mb-4 p-3 bg-red-500 rounded">{error}</div>}
 
           <button
-            className="w-full px-6 py-3 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-500 transition duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
             type="submit"
             disabled={loading}
+            className="w-full py-3 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-500 transition disabled:opacity-50"
           >
-            {loading ? (
-              <>
-                <span className="flex items-center justify-center">
-                  <svg
-                    className="animate-spin h-5 w-5 mr-3 text-black"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle
-                      className="opacity-25"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                    ></circle>
-                    <path
-                      className="opacity-75"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                    ></path>
-                  </svg>
-                  Sending...
-                </span>
-              </>
-            ) : (
-              <>
-                Send Message <i className="fa-solid fa-paper-plane ml-2"></i>
-              </>
-            )}
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
-        <div className="social-links mb-10 items-center justify-center text-center mt-6">
-          <a
-            href="https://github.com/nandhitooo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mr-4 text-gray-300 hover:text-yellow-400 transition duration-300"
-          >
-            <i className="fab fa-github text-2xl"></i>
-          </a>
-          <a
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mr-4 text-gray-300 hover:text-yellow-400 transition duration-300"
-          >
-            <i className="fab fa-linkedin text-2xl"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/nandh1tooo_/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-300 hover:text-yellow-400 transition duration-300"
-          >
-            <i className="fab fa-instagram text-2xl"></i>
-          </a>
-          <a
-            href="https://x.com/Fernandhito8"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-4 text-gray-300 hover:text-yellow-400 transition duration-300"
-          >
-            <i className="fab fa-x-twitter text-2xl"></i>
-          </a>
-          <a
-            href="https://www.facebook.com/Nandhitooo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-4 text-gray-300 hover:text-yellow-400 transition duration-300"
-          >
-            <i className="fab fa-facebook text-2xl"></i>
-          </a>
-          <a
-            href="https://www.tiktok.com/@nandhitooo_"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-4 text-gray-300 hover:text-yellow-400 transition duration-300"
-          >
-            <i className="fab fa-tiktok text-2xl"></i>
-          </a>
-          <a
-            href="https://discord.gg/hnrPCyt5n2"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-4 text-gray-300 hover:text-yellow-400 transition duration-300"
-          >
-            <i className="fab fa-discord text-2xl"></i>
-          </a>
+
+        <div className="flex flex-col items-center justify-center space-y-6">
+          <div className="flex flex-wrap justify-center gap-6">
+            {socialLinks.map((item, index) => (
+              <a
+                key={index}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-yellow-400 transition text-2xl"
+              >
+                <i className={item.icon}></i>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

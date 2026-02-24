@@ -2,20 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 150) {
-        setIsMenuOpen(true);
-      } else {
-        setIsMenuOpen(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const [active, setActive] = React.useState("home");
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -24,34 +11,84 @@ const Navbar = () => {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = [
+        "home",
+        "about",
+        "journey",
+        "skills",
+        "projects",
+        "contact",
+      ];
+      const scrollPosition = window.scrollY + 150;
+      sections.forEach((Id) => {
+        const section = document.getElementById(Id);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 120 && rect.bottom >= 120) {
+            setActive(Id);
+          }
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const defaultLinkstyles = "hover:text-yellow-400 font-medium";
+
+  const activeLinkStyles = "text-yellow-400 font-bold";
+
   return (
-    <div className="navbar fixed top-0 lg:left-50 lg:right-50 z-50 flex items-center justify-between py-4 text-white bg-zinc-900 sm:hidden md:flex md:px-10 md:py-6 md:left-0 md:right-0">
-      <h1 className="title text-2xl font-bold text-white ">Fernandhito</h1>
-      <ul
-        className={`menu flex space-x-4 gap-10 md:static fixed left-1/2 -translate-x-1/2 md:-translate-x-0 md:opacity-100 ${
-          isMenuOpen ? "top-0 opacity-100" : "-top-10 opacity-0"
-        }`}
-      >
-        <li className="hover:text-yellow-400 font-medium">
-          <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection("home"); }}>Home</a>
-        </li>
-        <li className="hover:text-yellow-400 font-medium">
-          <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection("about"); }}>About</a>
-        </li>
-        <li className="hover:text-yellow-400 font-medium">
-          <a href="#journey" onClick={(e) => { e.preventDefault(); scrollToSection("journey"); }}>Journey</a>
-        </li>
-        <li className="hover:text-yellow-400 font-medium">
-          <a href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection("skills"); }}>Skills</a>
-        </li>
-        <li className="hover:text-yellow-400 font-medium">
-          <a href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection("projects"); }}>Projects</a>
-        </li>
-        <li className="hover:text-yellow-400 font-medium">
-          <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection("contact"); }}>Contact</a>
-        </li>
-      </ul>
-    </div>
+    <section className="fixed hidden sm:flex top-0 left-0 w-full h-16 bg-zinc-900 text-white z-50">
+      <nav className="container mx-auto flex items-center justify-between py-4 px-6">
+        <div className="text-2xl font-bold">Fernandhito</div>
+        <ul className="flex space-x-6">
+          <li
+            className={`${active === "home" ? activeLinkStyles : defaultLinkstyles} cursor-pointer`}
+            onClick={() => scrollToSection("home")}
+          >
+            Home
+          </li>
+          <li
+            className={`${active === "about" ? activeLinkStyles : defaultLinkstyles} cursor-pointer`}
+            onClick={() => scrollToSection("about")}
+          >
+            About
+          </li>
+          <li
+            className={`${active === "journey" ? activeLinkStyles : defaultLinkstyles} cursor-pointer`}
+            onClick={() => scrollToSection("journey")}
+          >
+            Journey
+          </li>
+          <li
+            className={`${active === "skills" ? activeLinkStyles : defaultLinkstyles} cursor-pointer`}
+            onClick={() => scrollToSection("skills")}
+          >
+            Skills
+          </li>
+          <li
+            className={`${active === "projects" ? activeLinkStyles : defaultLinkstyles} cursor-pointer`}
+            onClick={() => scrollToSection("projects")}
+          >
+            Projects
+          </li>
+          <li
+            className={`${active === "contact" ? activeLinkStyles : defaultLinkstyles} cursor-pointer`}
+            onClick={() => scrollToSection("contact")}
+          >
+            Contact
+          </li>
+        </ul>
+      </nav>
+    </section>
   );
 };
 

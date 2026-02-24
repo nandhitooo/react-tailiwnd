@@ -2,9 +2,11 @@ import React from 'react'
 
 const Bottom = () => {
   return (
-    <div className="bottom text-center py-6 text-gray-400">
-      &copy; 2026 Fernandhito Pratama. All rights reserved.
-    </div>
+    <section className="w-full bg-zinc-900 text-yellow-400 text-center py-4 mt-10">
+      <p className="text-md font-medium">
+        &copy; {new Date().getFullYear()} Fernandhito. All rights reserved.
+      </p>
+    </section>
   )
 }
 

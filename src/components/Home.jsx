@@ -40,7 +40,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-transparent text-zinc-900 dark:text-white transition-colors duration-1000 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center bg-transparent text-zinc-900 dark:text-white transition-colors duration-300 relative overflow-hidden"
     >
       <div className="absolute top-1/4 -left-20 w-72 h-72 bg-yellow-400/20 rounded-full blur-3xl motion-safe:animate-pulse"></div>
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl motion-safe:animate-pulse motion-delay-500"></div>

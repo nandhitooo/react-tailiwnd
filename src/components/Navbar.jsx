@@ -104,9 +104,9 @@ const Navbar = () => {
                 checked={theme === "dark"}
                 onChange={toggleTheme}
               />
-              <div className="w-12 h-6 sm:w-14 sm:h-7 bg-gray-200 dark:bg-zinc-800 rounded-full transition-all duration-500 border border-gray-300 dark:border-zinc-700"></div>
+              <div className="w-12 h-6 sm:w-14 sm:h-7 bg-gray-200 dark:bg-zinc-800 rounded-full transition-all duration-300 border border-gray-300 dark:border-zinc-700"></div>
               <div
-                className={`absolute left-1 top-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full transition-all duration-500 flex items-center justify-center ${
+                className={`absolute left-1 top-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full transition-all duration-300 flex items-center justify-center ${
                   theme === "dark"
                     ? "translate-x-6 sm:translate-x-7 bg-zinc-950 text-yellow-400"
                     : "bg-white text-zinc-900 shadow-md"

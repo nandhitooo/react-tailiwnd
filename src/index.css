@@ -10,7 +10,7 @@ html {
 @layer base {
   body {
     font-family: "Poppins", sans-serif;
-    @apply bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-500;
+    @apply bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-300;
     background-image: radial-gradient(
       circle at 2px 2px,
       rgba(0, 0, 0, 0.05) 1px,
@@ -38,6 +38,9 @@ html {
   }
 
   .transition-all {
+    transition-property:
+      color, background-color, border-color, text-decoration-color, fill,
+      stroke, opacity, box-shadow, transform, filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }

@@ -84,7 +84,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen bg-transparent text-zinc-900 dark:text-white flex flex-col items-center px-6 py-24 transition-colors duration-1000"
+      className="min-h-screen bg-transparent text-zinc-900 dark:text-white flex flex-col items-center px-6 py-24 transition-colors duration-300"
     >
       <Reveal animation="motion-preset-slide-up motion-duration-1000">
         <div className="max-w-4xl w-full text-center mb-12 sm:mb-16">

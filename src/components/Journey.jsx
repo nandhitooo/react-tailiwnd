@@ -57,7 +57,7 @@ const Journey = () => {
   return (
     <section
       id="journey"
-      className="journey flex items-center justify-center bg-transparent text-zinc-900 dark:text-white py-24 transition-colors duration-1000"
+      className="journey flex items-center justify-center bg-transparent text-zinc-900 dark:text-white py-24 transition-colors duration-300"
     >
       <div className="max-w-6xl w-full px-6">
         <Reveal animation="motion-preset-fade motion-duration-1000">

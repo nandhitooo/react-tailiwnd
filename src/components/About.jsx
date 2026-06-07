@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex items-center justify-center bg-transparent text-zinc-900 dark:text-white py-16 sm:py-24 transition-colors duration-1000 relative overflow-hidden"
+      className="flex items-center justify-center bg-transparent text-zinc-900 dark:text-white py-16 sm:py-24 transition-colors duration-300 relative overflow-hidden"
     >
       {/* Decorative background element */}
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 sm:w-96 h-64 sm:h-96 bg-yellow-400/5 rounded-full blur-3xl -z-10"></div>

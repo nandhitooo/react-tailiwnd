@@ -1,4 +1,5 @@
 import React from "react";
+import profilePict from "../components/assets/picture.jpg";
 
 const About = () => {
   return (
@@ -6,11 +7,11 @@ const About = () => {
       id="about"
       className="flex items-center justify-center bg-zinc-900 text-white"
     >
-      <div
-        className="mt-10 py-20 text-justify items-center px-4"
-      >
+      <div className="mt-10 py-20 text-justify items-center px-4">
         <h5 className="font-medium mb-2 text-yellow-400">001</h5>
-        <h2 className="text-4xl font-bold mb-4 text-left sm:text-justify">Fernandhito Dian Pratama</h2>
+        <h2 className="text-4xl font-bold mb-4 text-left sm:text-justify">
+          Fernandhito Dian Pratama
+        </h2>
         <span className="text-md font-medium text-black bg-yellow-400 p-2 rounded-lg hover:scale-105 transition-all duration-300">
           Front-end
         </span>
@@ -20,7 +21,14 @@ const About = () => {
         <span className="text-md font-medium text-black bg-yellow-400 p-2 rounded-lg ml-2 hover:scale-105 transition-all duration-300">
           Multimedia
         </span>
-        <p className="mt-15 text-xl text-gray-300">
+        <div className="profile_pict mt-10 flex items-center justify-center lg:justify-start">
+          <img
+            src={profilePict}
+            alt="Profile"
+            className="w-48 h-48 ml-5 rounded-full border-3 border-yellow-400 object-cover shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+          />
+        </div>
+        <p className="mt-10 text-xl text-gray-300 text-left lg:text-justify">
           I am an Informatics Engineering student at the Electronic Engineering
           Polytechnic Institute of Surabaya (EEPIS) with a strong focus on
           front-end development. I actively build and refine user interfaces
@@ -28,7 +36,7 @@ const About = () => {
           my skills through consistent self-directed practice and hands-on
           experimentation.
         </p>
-        <p className="mt-6 text-xl text-gray-300">
+        <p className="mt-6 text-xl text-gray-300 text-left lg:text-justify">
           I have developed multiple website projects using HTML and CSS as a
           strong foundation. I also work with modern technologies such as
           JavaScript, React, and Tailwind CSS to create interactive and scalable

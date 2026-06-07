@@ -7,12 +7,10 @@ const Project = () => {
       id="projects"
       className="min-h-screen flex items-center justify-center bg-zinc-900 text-white"
     >
-      <div
-        className="project mt-10 py-20 text-justify items-center px-4"
-      >
+      <div className="project mt-10 py-20 text-justify items-center px-4">
         <h5 className="font-medium mb-2 text-yellow-400">004</h5>
         <h2 className="text-4xl font-bold mb-4">Projects</h2>
-        <p className="mt-6 text-xl text-gray-300">
+        <p className="mt-6 text-xl text-gray-300 text-left lg:text-justify">
           Here are some of my projects that showcase my skills in front-end
           development and UI/UX design. Each project highlights my ability to
           create responsive, user-friendly, and visually appealing web
@@ -49,7 +47,7 @@ const Project = () => {
             <span className="text-sm font-medium text-black bg-yellow-400 p-2 rounded-lg ml-2">
               <i class="fa-brands fa-react"></i>
             </span>
-            <p className="text-gray-300 mt-4">
+            <p className="text-gray-300 mt-4 text-left lg:text-justify">
               A simple Front-end cashier application built with Javascript and
               React.js.
             </p>
@@ -72,7 +70,7 @@ const Project = () => {
             <span className="text-sm font-medium text-black bg-yellow-400 p-2 rounded-lg ml-2">
               Hapi.js
             </span>
-            <p className="text-gray-300 mt-4">
+            <p className="text-gray-300 mt-4 text-left lg:text-justify">
               A back-end cashier application built with Node.js and Hapi.js.
             </p>
             <p className="mt-4">
@@ -94,7 +92,7 @@ const Project = () => {
             <span className="text-sm font-medium text-black bg-yellow-400 p-2 rounded-lg ml-2">
               <i class="fa-brands fa-react"></i>
             </span>
-            <p className="text-gray-300 mt-4">
+            <p className="text-gray-300 mt-4 text-left lg:text-justify">
               A personal blog website built with Javascript and React.js.
             </p>
             <p className="mt-4">
@@ -113,7 +111,7 @@ const Project = () => {
             <span className="text-sm font-medium text-black bg-yellow-400 p-2 rounded-lg">
               <i class="fa-brands fa-java"></i>
             </span>
-            <p className="text-gray-300 mt-4">
+            <p className="text-gray-300 mt-4 text-left lg:text-justify">
               A CLI-Based game built with Java.
             </p>
             <p className="mt-4">
@@ -135,7 +133,7 @@ const Project = () => {
             <span className="text-sm font-medium text-black bg-yellow-400 p-2 rounded-lg ml-2">
               <i class="fa-brands fa-react"></i>
             </span>
-            <p className="text-gray-300 mt-4">
+            <p className="text-gray-300 mt-4 text-left lg:text-justify">
               This is my middle second semester project.
             </p>
             <p className="mt-4">

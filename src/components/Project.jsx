@@ -18,20 +18,28 @@ const Project = () => {
         </p>
         <div className="project_cards mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="project_card bg-gray-800 p-6 rounded-xl border-l-4 border-yellow-400 shadow-lg hover:scale-105 cursor-pointer transition-transform duration-300">
-            <h3 className="text-2xl font-bold mb-4">Profile Website</h3>
+            <h3 className="text-2xl font-bold mb-4 text-left lg:text-justify">
+              Workout Recording Application
+            </h3>
             <span className="text-sm font-medium text-black bg-yellow-400 p-2 rounded-lg">
-              <i class="fa-brands fa-html5"></i>
+              <i class="fa-brands fa-flutter"></i>
             </span>
             <span className="text-sm font-medium text-black bg-yellow-400 p-2 rounded-lg ml-2">
-              <i class="fa-brands fa-css3-alt"></i>
+              <i class="fa-brands fa-dart-lang"></i>
             </span>
-            <p className="text-gray-300 mt-4">
-              This is my first project as an informatics engineering student.
+            <p className="text-gray-300 mt-4 text-left lg:text-justify">
+              workout recording application built with flutter and dart
+              programming language. This project is my first mobile application
+              project and it is a simple workout recording application that
+              allows users to log their workouts and track their progress. The
+              app features a user-friendly interface with intuitive navigation,
+              making it easy for users to input their workout data and view
+              their fitness journey over time.
             </p>
             <p className="mt-4">
               <i className="fa-solid fa-code-branch mr-2"></i>
               <a
-                href="https://github.com/nandhitooo/final-project-semester1"
+                href="https://github.com/nandhitooo/wgywm-app.git"
                 className="text-yellow-400 hover:text-yellow-300 underline"
               >
                 View Project
@@ -40,7 +48,9 @@ const Project = () => {
             </p>
           </div>
           <div className="project_card bg-gray-800 p-6 rounded-xl border-l-4 border-yellow-400 shadow-lg hover:scale-105 cursor-pointer transition-transform duration-300">
-            <h3 className="text-2xl font-bold mb-4">Front-end Cashier App</h3>
+            <h3 className="text-2xl font-bold mb-4 text-left lg:text-justify">
+              Cashier App
+            </h3>
             <span className="text-sm font-medium text-black bg-yellow-400 p-2 rounded-lg">
               <i class="fa-brands fa-js"></i>
             </span>
@@ -49,7 +59,12 @@ const Project = () => {
             </span>
             <p className="text-gray-300 mt-4 text-left lg:text-justify">
               A simple Front-end cashier application built with Javascript and
-              React.js.
+              React.js. This project is my first web application project and it
+              is a simple cashier application that allows users to manage their
+              sales, track inventory, and generate reports. The app features a
+              clean and intuitive interface, making it easy for users to
+              navigate through different sections and perform various tasks
+              related to sales and inventory management.
             </p>
             <p className="mt-4">
               <i className="fa-solid fa-code-branch mr-2"></i>
@@ -63,7 +78,9 @@ const Project = () => {
             </p>
           </div>
           <div className="project_card bg-gray-800 p-6 rounded-xl border-l-4 border-yellow-400 shadow-lg hover:scale-105 cursor-pointer transition-transform duration-300">
-            <h3 className="text-2xl font-bold mb-4">Back-end Cashier App</h3>
+            <h3 className="text-2xl font-bold mb-4 text-left lg:text-justify">
+              Back-end Cashier App
+            </h3>
             <span className="text-sm font-medium text-black bg-yellow-400 p-2 rounded-lg">
               <i class="fa-brands fa-node-js"></i>
             </span>
@@ -71,7 +88,15 @@ const Project = () => {
               Hapi.js
             </span>
             <p className="text-gray-300 mt-4 text-left lg:text-justify">
-              A back-end cashier application built with Node.js and Hapi.js.
+              A back-end cashier application built with Node.js and Hapi.js
+              framework. This project is the back-end part of my cashier
+              application and it is responsible for handling the server-side
+              logic, database management, and API endpoints. The back-end
+              application allows users to perform various operations such as
+              managing sales transactions, tracking inventory, and generating
+              reports. It is designed to work seamlessly with the front-end
+              cashier application, providing a robust and efficient solution for
+              sales and inventory management.
             </p>
             <p className="mt-4">
               <i className="fa-solid fa-code-branch mr-2"></i>
@@ -85,7 +110,9 @@ const Project = () => {
             </p>
           </div>
           <div className="project_card bg-gray-800 p-6 rounded-xl border-l-4 border-yellow-400 shadow-lg hover:scale-105 cursor-pointer transition-transform duration-300">
-            <h3 className="text-2xl font-bold mb-4">Personal Blog</h3>
+            <h3 className="text-2xl font-bold mb-4 text-left lg:text-justify">
+              Personal Blog
+            </h3>
             <span className="text-sm font-medium text-black bg-yellow-400 p-2 rounded-lg">
               <i class="fa-brands fa-js"></i>
             </span>
@@ -93,7 +120,14 @@ const Project = () => {
               <i class="fa-brands fa-react"></i>
             </span>
             <p className="text-gray-300 mt-4 text-left lg:text-justify">
-              A personal blog website built with Javascript and React.js.
+              A personal blog website built with Javascript and React + Vite +
+              Tailwind CSS. This project is a personal blog website which is
+              designed to showcase my thoughts and experiences. It includes
+              functionalities such as creating, editing, and deleting blog
+              posts, as well as categorizing and tagging posts for easy
+              navigation. The website is built using React for the front-end,
+              Vite for the build tool, and Tailwind CSS for styling, providing a
+              responsive and visually appealing platform for sharing content.
             </p>
             <p className="mt-4">
               <i className="fa-solid fa-code-branch mr-2"></i>
@@ -107,12 +141,20 @@ const Project = () => {
             </p>
           </div>
           <div className="project_card bg-gray-800 p-6 rounded-xl border-l-4 border-yellow-400 shadow-lg hover:scale-105 cursor-pointer transition-transform duration-300">
-            <h3 className="text-2xl font-bold mb-4">Virtual-Pet Games</h3>
+            <h3 className="text-2xl font-bold mb-4 text-left lg:text-justify">
+              Virtual-Pet Games
+            </h3>
             <span className="text-sm font-medium text-black bg-yellow-400 p-2 rounded-lg">
               <i class="fa-brands fa-java"></i>
             </span>
             <p className="text-gray-300 mt-4 text-left lg:text-justify">
-              A CLI-Based game built with Java.
+              A CLI-Based game built with Java. This project is a simple
+              command-line interface (CLI) game that allows users to interact
+              with virtual pets. The game includes features such as feeding,
+              playing, and caring for the virtual pets, providing an engaging
+              and interactive experience for users. It is designed to be a fun
+              and entertaining way to learn programming concepts while also
+              enjoying the process of taking care of virtual pets.
             </p>
             <p className="mt-4">
               <i className="fa-solid fa-code-branch mr-2"></i>
@@ -126,7 +168,9 @@ const Project = () => {
             </p>
           </div>
           <div className="project_card bg-gray-800 p-6 rounded-xl border-l-4 border-yellow-400 shadow-lg hover:scale-105 cursor-pointer transition-transform duration-300">
-            <h3 className="text-2xl font-bold mb-4">React Corporate Website</h3>
+            <h3 className="text-2xl font-bold mb-4 text-left lg:text-justify">
+              React Corporate Website
+            </h3>
             <span className="text-sm font-medium text-black bg-yellow-400 p-2 rounded-lg">
               <i class="fa-brands fa-js"></i>
             </span>
@@ -134,7 +178,15 @@ const Project = () => {
               <i class="fa-brands fa-react"></i>
             </span>
             <p className="text-gray-300 mt-4 text-left lg:text-justify">
-              This is my middle second semester project.
+              This website i built with React.js + Vite + Tailwind CSS. This
+              corporate website project is designed to showcase a professional
+              and modern online presence for a business or organization. It
+              features a clean and responsive design, intuitive navigation, and
+              engaging content to effectively communicate the company's brand,
+              services, and values. The website is built using React.js for the
+              front-end development, Vite for the build tool, and Tailwind CSS
+              for styling, ensuring a seamless user experience across different
+              devices and screen sizes.
             </p>
             <p className="mt-4">
               <i className="fa-solid fa-code-branch mr-2"></i>

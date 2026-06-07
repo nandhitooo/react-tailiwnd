@@ -5,8 +5,6 @@ import App from "./App.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <div className="container mx-auto px-4">
-      <App />
-    </div>
-  </StrictMode>
+    <App />
+  </StrictMode>,
 );

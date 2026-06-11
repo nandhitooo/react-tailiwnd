@@ -56,17 +56,19 @@ const Project = () => {
             <span className="w-8 sm:w-12 h-[2px] bg-yellow-400"></span>
             004 / Portfolio
           </h5>
-          <h2 className="text-3xl sm:text-5xl font-black mb-12 flex items-center justify-between flex-wrap gap-6">
-            Featured <span className="text-gradient">Projects</span>
+          <div className="flex items-center justify-between mb-12">
+            <h2 className="text-3xl sm:text-5xl font-black">
+              Featured <span className="text-gradient">Projects</span>
+            </h2>
             <button
-              className="w-full sm:w-auto px-6 py-3 glass-card rounded-full text-xs sm:text-sm font-bold hover:bg-yellow-400 hover:text-black transition-all duration-500 cursor-pointer shadow-lg hover:shadow-yellow-400/20"
+              className="px-6 py-3 glass-card rounded-full text-xs sm:text-sm font-bold hover:bg-yellow-400 hover:text-black transition-all duration-500 cursor-pointer shadow-lg hover:shadow-yellow-400/20"
               onClick={() =>
                 window.open("https://github.com/nandhitooo?tab=repositories")
               }
             >
               Explore All <i className="fa-solid fa-arrow-right ml-2"></i>
             </button>
-          </h2>
+          </div>
         </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">

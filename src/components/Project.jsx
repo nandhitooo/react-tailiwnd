@@ -16,20 +16,20 @@ const Project = () => {
     {
       title: "Cashier App",
       tags: [{ icon: "fa-brands fa-js" }, { icon: "fa-brands fa-react" }],
-      desc: "A simple Front-end cashier application built with Javascript and React.js. Manage sales, track inventory, and generate reports.",
+      desc: "A simple Front-end cashier application built with Javascript and React.js. Manage orders, calculate totals, and provide a user-friendly interface for cashiers.",
       link: "https://github.com/nandhitooo/front-end-kasir",
     },
     {
-      title: "Back-end Cashier App",
-      tags: [{ icon: "fa-brands fa-node-js" }, { text: "Hapi.js" }],
-      desc: "A back-end cashier application built with Node.js and Hapi.js framework. Responsible for server-side logic and API endpoints.",
-      link: "https://github.com/nandhitooo/back-end-kasir",
+      title: "Discord Bot",
+      tags: [{ icon: "fa-brands fa-python" }, { icon: "fa-brands fa-discord" }],
+      desc: "A Discord bot built with python, it provides various functionalities for Discord servers and i made it integrated with various APIs.",
+      link: "https://github.com/nandhitooo/Jarvis_Bot_DC.git",
     },
     {
-      title: "Personal Blog",
+      title: "Personal Website",
       tags: [{ icon: "fa-brands fa-js" }, { icon: "fa-brands fa-react" }],
-      desc: "A personal blog website built with Javascript and React + Vite + Tailwind CSS. Showcase thoughts and experiences.",
-      link: "https://github.com/nandhitooo/biography",
+      desc: "A personal website built with Javascript and React + Vite + Tailwind CSS (which is this website). Showcase thoughts and experiences.",
+      link: "https://github.com/nandhitooo/react-tailiwnd.git",
     },
     {
       title: "Virtual-Pet Games",
@@ -38,10 +38,10 @@ const Project = () => {
       link: "https://github.com/nandhitooo/Virtual-Pet-Games-Java",
     },
     {
-      title: "React Corporate Website",
+      title: "Company Website",
       tags: [{ icon: "fa-brands fa-js" }, { icon: "fa-brands fa-react" }],
-      desc: "Corporate website designed to showcase a professional and modern online presence for a business.",
-      link: "https://github.com/nandhitooo/react-corporate-semester2",
+      desc: "Company website designed to showcase a professional and modern online presence for a business.",
+      link: "https://github.com/nandhitooo/BUMDESMA.git",
     },
   ];
 

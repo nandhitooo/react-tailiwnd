@@ -64,7 +64,7 @@ const About = () => {
               ))}
             </div>
 
-            <div className="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed text-justify mb-10 sm:mb-12">
+            <div className="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed text-left mb-10 sm:mb-12">
               <p>
                 I am Fernandhito Dian Pratama, an Informatics Engineering
                 student at the Electronic Engineering Polytechnic Institute of

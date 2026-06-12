@@ -66,11 +66,15 @@ const About = () => {
 
             <div className="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed text-left mb-10 sm:mb-12">
               <p>
-                I am Fernandhito Dian Pratama, an Informatics Engineering
-                student at the Electronic Engineering Polytechnic Institute of
-                Surabaya (EEPIS) with a strong focus on front-end development. I
-                actively build and refine user interfaces with attention to
-                structure, responsiveness, and usability.
+                I am{" "}
+                <span className="font-bold text-black dark:text-white hover:cursor-pointer hover:text-yellow-500 transition-all duration-300">
+                  Fernandhito Dian Pratama
+                </span>
+                , an Informatics Engineering student at the Electronic
+                Engineering Polytechnic Institute of Surabaya (EEPIS) with a
+                strong focus on front-end development. I actively build and
+                refine user interfaces with attention to structure,
+                responsiveness, and usability.
               </p>
               <p>
                 I improve my skills through consistent self-directed practice

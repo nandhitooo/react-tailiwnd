@@ -70,7 +70,10 @@ const Contact = () => {
 
   const socialLinks = [
     { icon: "fab fa-github", link: "https://github.com/nandhitooo" },
-    { icon: "fab fa-linkedin", link: "#" },
+    {
+      icon: "fab fa-linkedin",
+      link: "https://www.linkedin.com/in/fernandhito-dian-pratama-657279417/",
+    },
     {
       icon: "fab fa-instagram",
       link: "https://www.instagram.com/nandh1tooo_/",

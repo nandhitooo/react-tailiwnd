@@ -63,7 +63,9 @@ const Home = () => {
           <button
             className="glass-card w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl sm:rounded-2xl text-zinc-900 dark:text-white font-semibold cursor-pointer hover:scale-110 hover:shadow-yellow-400/20 transition-all duration-500"
             onClick={() => {
-              window.open("");
+              window.open(
+                "https://www.linkedin.com/in/fernandhito-dian-pratama-657279417/",
+              );
             }}
           >
             <i className="fa-brands fa-linkedin text-lg sm:text-2xl"></i>

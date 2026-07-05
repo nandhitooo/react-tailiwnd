@@ -9,11 +9,14 @@ const Reveal = ({
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    const currentElement = sectionRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(sectionRef.current);
+          if (currentElement) {
+            observer.unobserve(currentElement);
+          }
         }
       },
       {
@@ -21,13 +24,13 @@ const Reveal = ({
       },
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (currentElement) {
+      observer.observe(currentElement);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
   }, []);

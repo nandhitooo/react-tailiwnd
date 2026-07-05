@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import Icon from "./Icon";
 import Reveal from "./Reveal";
 
 const Journey = () => {
@@ -28,14 +28,14 @@ const Journey = () => {
   const educationData = [
     {
       period: "2021 - 2024",
-      icon: "fa-solid fa-school",
+      icon: <Icon icon="fa-solid fa-school" />,
       title: "Nganjuk State Vocational High School 1",
       subtitle: "Major: Multimedia",
       desc: "I completed my education at State Vocational High School 1 Nganjuk, majoring in Multimedia. Over three years, I learned graphic design, photography, video editing, animation, and website development using HTML and CSS",
     },
     {
       period: "2024 - Present",
-      icon: "fa-solid fa-university",
+      icon: <Icon icon="fa-solid fa-university" />,
       title: "Electronic Engineering Polytechnic Institute of Surabaya (EEPIS)",
       subtitle: "Major: Informatics Engineering",
       desc: "I am currently pursuing a degree in Informatics Engineering at the Electronic Engineering Polytechnic Institute of Surabaya (EEPIS). Here, I am further developing my skills in web development, which is my main interest.",
@@ -45,7 +45,7 @@ const Journey = () => {
   const experienceData = [
     {
       period: "2022 - 2023",
-      icon: "fa-solid fa-print",
+      icon: <Icon icon="fa-solid fa-briefcase" />,
       title: "Intern at Sakura Digital Printing",
       desc: "I completed a six month internship at Sakura Digital Printing Nganjuk from October 2022 to March 2023. During this time, I learned how to operate banner printing machines and handle minor technical issues on the machines.",
     },
@@ -80,7 +80,7 @@ const Journey = () => {
                   : "glass-card text-gray-500 dark:text-gray-400 hover:text-zinc-900 dark:hover:text-white"
               }`}
             >
-              <i className="fa-solid fa-graduation-cap mr-2"></i>
+              <Icon icon="fa-solid fa-graduation-cap mr-2" />
               Education
             </button>
 
@@ -92,7 +92,7 @@ const Journey = () => {
                   : "glass-card text-gray-500 dark:text-gray-400 hover:text-zinc-900 dark:hover:text-white"
               }`}
             >
-              <i className="fa-solid fa-briefcase mr-2"></i>
+              <Icon icon="fa-solid fa-briefcase mr-2" />
               Experience
             </button>
           </div>
@@ -126,9 +126,7 @@ const Journey = () => {
                           {item.period}
                         </span>
                         <h4 className="text-xl sm:text-2xl font-black mb-4 flex items-center gap-3">
-                          <i
-                            className={`${item.icon} text-zinc-900 dark:text-white text-lg sm:text-xl`}
-                          ></i>
+                          {item.icon}
                           {item.title}
                         </h4>
                         {item.subtitle && (

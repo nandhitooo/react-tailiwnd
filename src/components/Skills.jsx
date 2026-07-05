@@ -1,5 +1,5 @@
 import React from "react";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import Icon from "./Icon";
 import Reveal from "./Reveal";
 
 const Skills = () => {
@@ -75,7 +75,7 @@ const Skills = () => {
                   <div
                     className={`text-3xl sm:text-4xl transition-colors duration-500 ${skill.color}`}
                   >
-                    <i className={skill.icon}></i>
+                    <Icon icon={skill.icon} />
                   </div>
                   <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-gray-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors duration-500">
                     {skill.name}

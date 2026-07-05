@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/Logo.jpeg" />
+    <link rel="icon" type="image/svg+xml" href="/Logo.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--- Font Poppins ---->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,10 +12,14 @@
       rel="stylesheet"
     />
     <script>
-      if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark')
+      if (
+        localStorage.getItem("theme") === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
       } else {
-        document.documentElement.classList.remove('dark')
+        document.documentElement.classList.remove("dark");
       }
     </script>
     <title>Fernandhito Pratama</title>

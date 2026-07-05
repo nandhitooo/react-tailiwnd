@@ -1,11 +1,10 @@
 import React from "react";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import picture from "./assets/picture.jpg";
+import Icon from "./Icon";
 import Contact from "./Contact";
 
 const Home = () => {
   const text = "Welcome...!!";
-  const typingText = () => {
+  const TypingText = () => {
     const [displayText, setDisplayText] = React.useState("");
     const [index, setIndex] = React.useState(0);
     React.useEffect(() => {
@@ -56,7 +55,7 @@ const Home = () => {
           </span>
         </p>
         <div className="motion-preset-fade motion-delay-500 motion-duration-1000">
-          {typingText()}
+          <TypingText />
         </div>
 
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-10 sm:mt-12 motion-preset-slide-up motion-delay-700 motion-duration-1000">
@@ -68,7 +67,7 @@ const Home = () => {
               );
             }}
           >
-            <i className="fa-brands fa-linkedin text-lg sm:text-2xl"></i>
+            <Icon icon="fa-brands fa-linkedin text-lg sm:text-2xl" />
           </button>
           <button
             className="glass-card w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl sm:rounded-2xl text-zinc-900 dark:text-white font-semibold cursor-pointer hover:scale-110 hover:shadow-yellow-400/20 transition-all duration-500"
@@ -76,7 +75,7 @@ const Home = () => {
               window.open("https://github.com/nandhitooo");
             }}
           >
-            <i className="fa-brands fa-github text-lg sm:text-2xl"></i>
+            <Icon icon="fa-brands fa-github text-lg sm:text-2xl" />
           </button>
           <button
             className="glass-card w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl sm:rounded-2xl text-zinc-900 dark:text-white font-semibold cursor-pointer hover:scale-110 hover:shadow-yellow-400/20 transition-all duration-500"
@@ -87,7 +86,7 @@ const Home = () => {
               }
             }}
           >
-            <i className="fa-solid fa-envelope text-lg sm:text-2xl"></i>
+            <Icon icon="fa-solid fa-envelope text-lg sm:text-2xl" />
           </button>
         </div>
       </div>
@@ -100,7 +99,7 @@ const Home = () => {
           }
         }}
       >
-        <i className="fas fa-chevron-down fa-xl sm:fa-2x"></i>
+        <Icon icon="fas fa-chevron-down text-xl sm:text-2xl" />
       </button>
     </section>
   );

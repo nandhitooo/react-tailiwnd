@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Icon from "./Icon";
 
 const Navbar = () => {
   const [active, setActive] = useState("home");
@@ -113,9 +114,9 @@ const Navbar = () => {
                 }`}
               >
                 {theme === "dark" ? (
-                  <i className="fa-solid fa-moon text-[8px] sm:text-[10px]"></i>
+                  <Icon icon="fa-solid fa-moon text-[8px] sm:text-[10px]" />
                 ) : (
-                  <i className="fa-solid fa-sun text-[8px] sm:text-[10px]"></i>
+                  <Icon icon="fa-solid fa-sun text-[8px] sm:text-[10px]" />
                 )}
               </div>
             </label>

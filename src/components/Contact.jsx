@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Reveal from "./Reveal";
+import Icon from "./Icon";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -31,7 +32,7 @@ const Contact = () => {
       e.target.reset();
       setSuccess(true);
       setTimeout(() => setSuccess(false), 5000);
-    } catch (err) {
+    } catch {
       setError("Failed to send message. Please try again.");
     } finally {
       setLoading(false);
@@ -136,14 +137,14 @@ const Contact = () => {
 
               {success && (
                 <div className="mb-6 p-4 bg-green-500/10 border border-green-500/50 text-green-500 rounded-2xl font-bold flex items-center gap-3 text-sm sm:text-base motion-preset-fade motion-duration-1000">
-                  <i className="fa-solid fa-circle-check"></i>
+                  <Icon icon="fa-solid fa-circle-check" />
                   Message sent successfully!
                 </div>
               )}
 
               {error && (
                 <div className="mb-6 p-4 bg-red-500/10 border border-red-500/50 text-red-500 rounded-2xl font-bold flex items-center gap-3 text-sm sm:text-base motion-preset-fade motion-duration-1000">
-                  <i className="fa-solid fa-circle-exclamation"></i>
+                  <Icon icon="fa-solid fa-circle-exclamation" />
                   {error}
                 </div>
               )}
@@ -154,7 +155,7 @@ const Contact = () => {
                 className="w-full py-4 sm:py-5 bg-zinc-900 dark:bg-white text-white dark:text-black font-black uppercase tracking-widest rounded-2xl hover:bg-yellow-400 dark:hover:bg-yellow-400 hover:text-black transition-all duration-500 disabled:opacity-50 shadow-xl hover:shadow-yellow-400/20 cursor-pointer flex items-center justify-center gap-3 group text-sm sm:text-base"
               >
                 {loading ? "Sending..." : "Send Message"}
-                <i className="fa-solid fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                <Icon icon="fa-solid fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>
             </form>
           </Reveal>
@@ -185,7 +186,7 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       className={`w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center glass-card rounded-2xl text-xl sm:text-2xl text-gray-500 hover:text-yellow-500 hover:scale-110 transition-all duration-300 motion-preset-fade ${delays[index] || "motion-delay-500"} motion-duration-1000`}
                     >
-                      <i className={item.icon}></i>
+                      <Icon icon={item.icon} />
                     </a>
                   );
                 })}

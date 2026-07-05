@@ -1,4 +1,5 @@
 import React from "react";
+import Icon from "./Icon";
 
 const Bottom = () => {
   return (
@@ -10,7 +11,7 @@ const Bottom = () => {
         <p className="text-xs font-medium">
           &copy; {new Date().getFullYear()} All rights reserved. Designed &
           Built with{" "}
-          <i className="fa-solid fa-heart text-red-500 animate-pulse"></i>
+          <Icon icon="fa-solid fa-heart text-red-500 animate-pulse" />
         </p>
       </div>
     </footer>

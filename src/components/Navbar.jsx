@@ -15,12 +15,42 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    const css = document.createElement("style");
+    css.appendChild(
+      document.createTextNode(
+        `* {
+           -webkit-transition: none !important;
+           -moz-transition: none !important;
+           -o-transition: none !important;
+           -ms-transition: none !important;
+           transition: none !important;
+        }`,
+      ),
+    );
+    document.head.appendChild(css);
+
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
     localStorage.setItem("theme", theme);
+
+    // Force style repaint to apply the changes without transitions
+    const _ = window.getComputedStyle(document.documentElement).opacity;
+
+    const timeout = setTimeout(() => {
+      if (css.parentNode) {
+        css.parentNode.removeChild(css);
+      }
+    }, 20);
+
+    return () => {
+      clearTimeout(timeout);
+      if (css.parentNode) {
+        css.parentNode.removeChild(css);
+      }
+    };
   }, [theme]);
 
   const toggleTheme = () => {

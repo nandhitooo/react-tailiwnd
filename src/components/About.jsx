@@ -20,8 +20,8 @@ const About = () => {
               <img
                 src={profilePict}
                 alt="Profile"
-                className="w-full aspect-square object-cover rounded-2xl shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-105 cursor-pointer"
                 loading="lazy"
+                className="w-full aspect-square object-cover rounded-2xl shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-105 cursor-pointer"
               />
               <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8 flex gap-2">
                 <span className="glass-card px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-widest text-yellow-500">

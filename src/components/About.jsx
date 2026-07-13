@@ -90,7 +90,7 @@ const About = () => {
               className="w-full sm:w-fit px-8 sm:px-10 py-4 sm:py-5 bg-zinc-900 dark:bg-white text-white dark:text-black font-black uppercase tracking-widest rounded-2xl hover:bg-yellow-400 dark:hover:bg-yellow-400 hover:text-black transition-all duration-300 shadow-2xl hover:shadow-yellow-400/40 flex items-center justify-center gap-4 group cursor-pointer"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1bsKAfNUsuH6hYpyJPyGFj80h8mIreUO-/view?usp=sharing",
+                  "https://drive.google.com/file/d/1zP5JIae-ynLXkj1kahyGIKncwGomZDnJ/view?usp=sharing",
                 )
               }
             >

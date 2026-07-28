@@ -42,41 +42,48 @@ const Home = () => {
       className="min-h-screen flex items-center justify-center bg-transparent text-zinc-900 dark:text-white transition-colors duration-300 relative overflow-hidden"
     >
 
-      <div className="text-center items-center z-10 px-4 sm:px-6">
-        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-4 sm:mb-6 tracking-tight leading-tight md:leading-none motion-preset-slide-up motion-duration-1000 motion-ease-in-out">
-          Hi, I'm <span className="text-gradient">Fernandhito</span>
+      <div className="text-center items-center z-10 px-4 sm:px-6 mt-16 sm:mt-0">
+        <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-gray-200/50 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-md motion-preset-slide-down motion-duration-1000 text-xs sm:text-sm font-semibold text-gray-600 dark:text-gray-300 shadow-sm">
+          <span className="inline-block w-2 h-2 rounded-full bg-yellow-400 mr-2 animate-pulse"></span>
+          Available for new projects
+        </div>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-4 sm:mb-6 tracking-tight leading-tight md:leading-none motion-preset-slide-up motion-duration-1000 motion-ease-in-out">
+          Hi, I'm <span className="text-gradient drop-shadow-sm">Fernandhito</span>
         </h1>
-        <p className="text-base sm:text-2xl md:text-3xl text-gray-500 dark:text-gray-400 mb-8 sm:mb-10 font-medium tracking-wide motion-preset-slide-up motion-delay-200 motion-duration-1000 motion-ease-in-out">
-          Crafting Digital Experiences with{" "}
-          <span className="text-zinc-900 dark:text-zinc-100 italic">
+        <p className="text-lg sm:text-2xl md:text-3xl text-gray-500 dark:text-gray-400 mb-8 sm:mb-10 font-medium tracking-wide motion-preset-slide-up motion-delay-200 motion-duration-1000 motion-ease-in-out max-w-2xl mx-auto">
+          Crafting Premium Digital Experiences with{" "}
+          <span className="text-zinc-900 dark:text-white italic relative inline-block">
             Passion
+            <span className="absolute bottom-0 sm:bottom-1 left-0 w-full h-1 sm:h-2 bg-yellow-400/40 -z-10 rotate-[-2deg]"></span>
           </span>
         </p>
-        <div className="motion-preset-fade motion-delay-500 motion-duration-1000">
+        <div className="motion-preset-fade motion-delay-500 motion-duration-1000 h-8 sm:h-10">
           <TypingText />
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-10 sm:mt-12 motion-preset-slide-up motion-delay-700 motion-duration-1000">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-10 sm:mt-12 motion-preset-slide-up motion-delay-700 motion-duration-1000">
           <button
-            className="glass-card w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl sm:rounded-2xl text-zinc-900 dark:text-white font-semibold cursor-pointer hover:scale-110 hover:shadow-yellow-400/20 transition-all duration-500"
+            className="glass-card group relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-2xl text-zinc-900 dark:text-white font-semibold cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(250,204,21,0.5)] transition-all duration-500 border border-gray-200/50 dark:border-zinc-700/50 hover:border-yellow-400/50 overflow-hidden"
             onClick={() => {
               window.open(
                 "https://www.linkedin.com/in/fernandhito-dian-pratama-657279417/",
               );
             }}
           >
-            <Icon icon="fa-brands fa-linkedin text-lg sm:text-2xl" />
+            <div className="absolute inset-0 bg-yellow-400/0 group-hover:bg-yellow-400/10 transition-colors duration-500"></div>
+            <Icon icon="fa-brands fa-linkedin text-xl sm:text-2xl group-hover:text-yellow-500 transition-colors duration-300" />
           </button>
           <button
-            className="glass-card w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl sm:rounded-2xl text-zinc-900 dark:text-white font-semibold cursor-pointer hover:scale-110 hover:shadow-yellow-400/20 transition-all duration-500"
+            className="glass-card group relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-2xl text-zinc-900 dark:text-white font-semibold cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(250,204,21,0.5)] transition-all duration-500 border border-gray-200/50 dark:border-zinc-700/50 hover:border-yellow-400/50 overflow-hidden"
             onClick={() => {
               window.open("https://github.com/nandhitooo");
             }}
           >
-            <Icon icon="fa-brands fa-github text-lg sm:text-2xl" />
+            <div className="absolute inset-0 bg-yellow-400/0 group-hover:bg-yellow-400/10 transition-colors duration-500"></div>
+            <Icon icon="fa-brands fa-github text-xl sm:text-2xl group-hover:text-yellow-500 transition-colors duration-300" />
           </button>
           <button
-            className="glass-card w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl sm:rounded-2xl text-zinc-900 dark:text-white font-semibold cursor-pointer hover:scale-110 hover:shadow-yellow-400/20 transition-all duration-500"
+            className="glass-card group relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-2xl text-zinc-900 dark:text-white font-semibold cursor-pointer hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(250,204,21,0.5)] transition-all duration-500 border border-gray-200/50 dark:border-zinc-700/50 hover:border-yellow-400/50 overflow-hidden"
             onClick={() => {
               const goTotSection = document.getElementById("contact");
               if (goTotSection) {
@@ -84,7 +91,8 @@ const Home = () => {
               }
             }}
           >
-            <Icon icon="fa-solid fa-envelope text-lg sm:text-2xl" />
+            <div className="absolute inset-0 bg-yellow-400/0 group-hover:bg-yellow-400/10 transition-colors duration-500"></div>
+            <Icon icon="fa-solid fa-envelope text-xl sm:text-2xl group-hover:text-yellow-500 transition-colors duration-300" />
           </button>
         </div>
       </div>

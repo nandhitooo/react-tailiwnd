@@ -36,6 +36,16 @@ const Skills = () => {
       icon: "fa-solid fa-video",
       color: "hover:text-pink-500",
     },
+    {
+      name: "Laravel",
+      icon: "fa-brands fa-laravel",
+      color: "hover:text-red-600",
+    },
+    {
+      name: "Flutter",
+      icon: "fa-brands fa-flutter",
+      color: "hover:text-cyan-500",
+    },
   ];
 
   return (

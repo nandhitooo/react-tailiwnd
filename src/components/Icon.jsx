@@ -16,6 +16,9 @@ import {
   faPython,
   faFlutter,
   faDartLang,
+  faPhp,
+  faPostgresql,
+  faLaravel,
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
@@ -74,6 +77,9 @@ const ICONS = {
   "fa-school": faSchool,
   "fa-university": faUniversity,
   "fa-print": faPrint,
+  "fa-php": faPhp,
+  "fa-postgresql": faPostgresql,
+  "fa-laravel": faLaravel,
 };
 
 const PREFIX_TOKENS = ["fa-brands", "fab", "fa-solid", "fas"];

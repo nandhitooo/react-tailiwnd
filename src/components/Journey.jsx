@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Icon from "./Icon";
 import Reveal from "./Reveal";
+import { icon } from "@fortawesome/fontawesome-svg-core";
 
 const Journey = () => {
   const [active, setActive] = useState("education");
@@ -49,6 +50,12 @@ const Journey = () => {
       title: "Intern at Sakura Digital Printing",
       desc: "I completed a six month internship at Sakura Digital Printing Nganjuk from October 2022 to March 2023. During this time, I learned how to operate banner printing machines and handle minor technical issues on the machines.",
     },
+    {
+      period: "2026 - Present",
+      icon: <Icon icon="fa-solid fa-briefcase" />,
+      title: "Intern at CV. AGSATU",
+      desc: "Currently i'm doing internship at CV. AGSATU Kediri, where I am responsible to develop web application and mobile application for clients. We use Laravel for web, flutter for mobile apps, and postgreSQL for database."
+    }
   ];
 
   const data = active === "education" ? educationData : experienceData;

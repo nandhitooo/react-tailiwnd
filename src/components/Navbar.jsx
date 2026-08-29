@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Icon from "./Icon";
+import { useLanguage } from "../context/LanguageContext";
 
 const Navbar = () => {
+  const { language, toggleLanguage, t } = useLanguage();
   const [active, setActive] = useState("home");
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
   const [isOpen, setIsOpen] = useState(false);
@@ -84,21 +86,34 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", id: "home" },
-    { name: "About", id: "about" },
-    { name: "Journey", id: "journey" },
-    { name: "Skills", id: "skills" },
-    { name: "Projects", id: "projects" },
-    { name: "Contact", id: "contact" },
+    { name: t("nav.home"), id: "home" },
+    { name: t("nav.about"), id: "about" },
+    { name: t("nav.journey"), id: "journey" },
+    { name: t("nav.skills"), id: "skills" },
+    { name: t("nav.projects"), id: "projects" },
+    { name: t("nav.contact"), id: "contact" },
   ];
 
+  const LanguageSwitch = ({ className = "" }) => (
+    <button
+      type="button"
+      onClick={toggleLanguage}
+      aria-label="Switch language"
+      className={`flex items-center gap-1 h-8 sm:h-9 px-2.5 sm:px-3 rounded-full glass-card text-[11px] sm:text-xs font-bold text-zinc-600 dark:text-zinc-300 hover:text-amber-500 dark:hover:text-amber-400 cursor-pointer ${className}`}
+    >
+      <span className={language === "en" ? "text-amber-500" : ""}>EN</span>
+      <span className="text-zinc-300 dark:text-zinc-700">/</span>
+      <span className={language === "id" ? "text-amber-500" : ""}>ID</span>
+    </button>
+  );
+
   return (
-    <header className="fixed top-4 sm:top-6 inset-x-0 flex justify-center z-50 motion-preset-slide-down motion-duration-1000 motion-ease-in-out px-4">
-      <div className="glass-card rounded-2xl md:rounded-full h-14 sm:h-16 w-full max-w-5xl flex items-center justify-between px-4 sm:px-10 relative">
+    <header className="fixed top-4 sm:top-6 inset-x-0 flex justify-center z-50 motion-preset-slide-down motion-duration-700 motion-ease-in-out px-4">
+      <div className="glass-card rounded-2xl md:rounded-full h-14 sm:h-16 w-full max-w-5xl flex items-center justify-between px-4 sm:px-8 relative">
         {/* Brand - Left Anchor */}
         <div className="flex-1 flex justify-start">
           <div
-            className="text-lg sm:text-xl font-bold tracking-tighter text-gradient cursor-pointer whitespace-nowrap"
+            className="text-lg sm:text-xl font-bold tracking-tight text-gradient cursor-pointer whitespace-nowrap"
             onClick={() => scrollToSection("home")}
           >
             Fernandhito
@@ -113,8 +128,8 @@ const Navbar = () => {
                 key={link.id}
                 className={`px-4 py-2 rounded-full cursor-pointer transition-all duration-300 text-sm font-semibold whitespace-nowrap ${
                   active === link.id
-                    ? "text-yellow-500 bg-yellow-500/10"
-                    : "text-gray-500 hover:text-zinc-900 dark:hover:text-white"
+                    ? "text-amber-500 bg-amber-500/10"
+                    : "text-zinc-500 hover:text-zinc-900 dark:hover:text-white"
                 }`}
                 onClick={() => scrollToSection(link.id)}
               >
@@ -125,7 +140,9 @@ const Navbar = () => {
         </nav>
 
         {/* Actions - Right Anchor */}
-        <div className="flex-1 flex items-center justify-end gap-3 sm:gap-4">
+        <div className="flex-1 flex items-center justify-end gap-2 sm:gap-3">
+          <LanguageSwitch className="hidden sm:flex" />
+
           {/* Theme Toggle Switch */}
           <div className="flex items-center scale-90 sm:scale-100">
             <label className="relative inline-flex items-center cursor-pointer group">
@@ -135,11 +152,11 @@ const Navbar = () => {
                 checked={theme === "dark"}
                 onChange={toggleTheme}
               />
-              <div className="w-12 h-6 sm:w-14 sm:h-7 bg-gray-200 dark:bg-zinc-800 rounded-full transition-all duration-300 border border-gray-300 dark:border-zinc-700"></div>
+              <div className="w-12 h-6 sm:w-14 sm:h-7 bg-zinc-200 dark:bg-zinc-800 rounded-full transition-all duration-300 border border-zinc-300 dark:border-zinc-700"></div>
               <div
                 className={`absolute left-1 top-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full transition-all duration-300 flex items-center justify-center ${
                   theme === "dark"
-                    ? "translate-x-6 sm:translate-x-7 bg-zinc-950 text-yellow-400"
+                    ? "translate-x-6 sm:translate-x-7 bg-zinc-950 text-amber-400"
                     : "bg-white text-zinc-900 shadow-md"
                 }`}
               >
@@ -156,6 +173,7 @@ const Navbar = () => {
           <button
             className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 glass-card rounded-xl cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
             <span
               className={`w-5 h-[2px] bg-zinc-900 dark:bg-white transition-all duration-300 ${isOpen ? "rotate-45 translate-y-[8px]" : ""}`}
@@ -171,20 +189,20 @@ const Navbar = () => {
 
         {/* Mobile Navigation Menu */}
         <div
-          className={`absolute top-16 sm:top-20 left-0 w-full glass-card rounded-2xl sm:rounded-3xl overflow-hidden transition-all duration-500 lg:hidden ${
+          className={`absolute top-16 sm:top-20 left-0 w-full glass-card rounded-2xl overflow-hidden transition-all duration-500 lg:hidden ${
             isOpen
-              ? "max-h-[450px] opacity-100 p-4 sm:p-6"
+              ? "max-h-[500px] opacity-100 p-4 sm:p-6"
               : "max-h-0 opacity-0 p-0"
           }`}
         >
-          <ul className="flex flex-col gap-2 sm:gap-4 items-center">
+          <ul className="flex flex-col gap-2 sm:gap-3 items-center">
             {navLinks.map((link) => (
               <li
                 key={link.id}
-                className={`w-full text-center px-4 py-3 rounded-xl sm:rounded-2xl cursor-pointer transition-all duration-300 font-bold text-sm sm:text-base ${
+                className={`w-full text-center px-4 py-3 rounded-xl cursor-pointer transition-all duration-300 font-bold text-sm sm:text-base ${
                   active === link.id
-                    ? "text-yellow-500 bg-yellow-500/10"
-                    : "text-gray-500 dark:text-gray-400"
+                    ? "text-amber-500 bg-amber-500/10"
+                    : "text-zinc-500 dark:text-zinc-400"
                 }`}
                 onClick={() => scrollToSection(link.id)}
               >
@@ -192,6 +210,9 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          <div className="mt-2 pt-3 border-t border-zinc-200/60 dark:border-zinc-800/60 flex justify-center sm:hidden">
+            <LanguageSwitch />
+          </div>
         </div>
       </div>
     </header>

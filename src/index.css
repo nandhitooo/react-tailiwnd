@@ -5,6 +5,20 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
@@ -13,28 +27,33 @@ html {
     @apply bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-300;
     background-image: radial-gradient(
       circle at 2px 2px,
-      rgba(0, 0, 0, 0.05) 1px,
+      rgba(0, 0, 0, 0.04) 1px,
       transparent 0
     );
-    background-size: 40px 40px;
+    background-size: 32px 32px;
   }
 
   .dark body {
     background-image: radial-gradient(
       circle at 2px 2px,
-      rgba(255, 255, 255, 0.05) 1px,
+      rgba(255, 255, 255, 0.035) 1px,
       transparent 0
     );
+  }
+
+  :focus-visible {
+    outline: 2px solid theme(colors.amber.500);
+    outline-offset: 2px;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-linear-to-r from-yellow-400 to-orange-500;
+    @apply bg-clip-text text-transparent bg-linear-to-r from-amber-400 to-amber-600;
   }
 
   .glass-card {
-    @apply bg-white/70 dark:bg-zinc-900/70 backdrop-blur-xl border border-white/20 dark:border-zinc-800/50 shadow-2xl;
+    @apply bg-white/80 dark:bg-zinc-900/60 backdrop-blur-md border border-zinc-200/70 dark:border-zinc-800/70 shadow-sm shadow-zinc-900/5 dark:shadow-black/20;
   }
 
   .transition-all {

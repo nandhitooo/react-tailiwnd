@@ -8,7 +8,6 @@ import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Bottom from "./components/Bottom";
 
-
 function App() {
   return (
     <>
